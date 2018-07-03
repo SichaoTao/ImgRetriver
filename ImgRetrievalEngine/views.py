@@ -30,12 +30,8 @@ def uploadImgs(request):
     cursor = db.cursor()
 
     try:
-        # resp = ur.urlopen(url)
-        resp = ur.urlopen('http://27.115.11.254:40011/uploads/attachment_images/project/201806/44/IMAGES_1527831198_NwdAat.jpg')
-        image = np.asarray(bytearray(resp.read()), dtype="uint8")
-
-        image = cv2.imdecode(image, cv2.IMREAD_COLOR)
-
+        
+        image = cv2.imread("E:\\paper\\21.jpg")
         color_feature = ImgCST.getColorMoments(image)
         color_feature = pickle.dumps(color_feature, pickle.HIGHEST_PROTOCOL)
 
@@ -78,11 +74,7 @@ def retrievalImgs(request):
     cursor = db.cursor()
 
     image = cv2.imread("E:\\paper\\21.jpg")
-    # image = Image.open("E:\\paper\\20180626133319")
-    # # resp = ur.urlopen(url)
-    # resp = ur.urlopen('http://27.115.11.254:40011/uploads/attachment_images/project/201806/44/IMAGES_1527831198_NwdAat.jpg')
-    # image = np.asarray(bytearray(resp.read()), dtype="uint8")
-    # image = cv2.imdecode(image, cv2.IMREAD_COLOR)
+    
 
     color_feature_url = ImgCST.getColorMoments(image)
     kp,orb_feature_url=OrbDescriptor.getORBFeature(image)
