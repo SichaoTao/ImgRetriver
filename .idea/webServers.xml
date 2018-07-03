@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8c3e8e57-679e-4dd1-b73c-7d9cdbffa80d" name="PuminTech" url="http://116.62.203.48">
+        <fileTransfer host="116.62.203.48" port="22" rootFolder="/home/PMtech/PuminTech" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
